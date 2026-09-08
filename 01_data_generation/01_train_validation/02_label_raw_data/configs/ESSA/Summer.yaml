@@ -1,0 +1,76 @@
+airport: ESSA
+season: Summer
+
+filters:
+  min_distance: 0.0015
+  max_distance: null
+  max_distance_start: null
+  min_duration: null
+  max_duration: 250
+  min_average_speed: 0.00015
+
+reasons:
+  min_distance: >
+    Pushback segments with a distance below 0.0015 NM were considered most likely
+    to be noise.
+
+  max_distance: >
+    No additional maximum-distance filter was required for this airport and season.
+
+  max_distance_start: >
+    No additional filter based on the distance from the beginning of the
+    trajectory was required for this airport and season.
+
+  min_duration: >
+    No additional minimum-duration filter was required for this airport and season.
+
+  max_duration: >
+    Pushback segments longer than 250 seconds were found to be incorrectly labeled
+    or excessively long due to noise, an early detected start, or a late detected end.
+
+  min_average_speed: >
+    Pushback segments with an average speed below 0.00015 were mostly found
+    to be incorrectly labeled.
+
+  pushbacks_remove: >
+    Additional incorrectly labeled pushback segments identified during
+    manual inspection.
+
+  pushbacks_keep: >
+    Automatically filtered pushback segments that were manually confirmed
+    to be correctly labeled.
+
+  no_pushbacks_remove: >
+    Flights without an automatically detected pushback that were identified
+    as false negatives during manual inspection and therefore excluded.
+
+manual_review:
+  pushbacks_remove:
+    - RYR4622_2594
+    - SAS016_1566
+    - FIN4XD_422
+
+  pushbacks_keep: []
+
+  no_pushbacks_remove:
+    - BLX203_1391
+    - DLH3WT_240
+    - DLH7EJ_139
+    - FIN2N_524
+    - DLH9KA_243
+    - FIN4RA_526
+    - FIN826_523
+    - FIN826_528
+    - FIN2N_530
+    - NSZ5HA_1724
+    - RYR3ZX_3479
+    - RYR7678_2612
+    - RYR5JA_2604
+    - SAS1014_2745
+    - SAS1555_1438
+    - SAS1553_3062
+    - SAS161_2911
+    - SAS2843_1528
+    - SAS40G_451
+    - SAS702_2742
+    - UAE158_3634

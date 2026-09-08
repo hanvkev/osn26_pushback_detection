@@ -1,0 +1,73 @@
+airport: ESSA
+season: Winter
+
+filters:
+  min_distance: null
+  max_distance: 0.21
+  max_distance_start: null
+  min_duration: null
+  max_duration: null
+  min_average_speed: 0.00026
+
+reasons:
+  min_distance: >
+    No additional minimum-distance filter was required for this airport and season.
+
+  max_distance: >
+    Pushback segments with a distance greater than 0.21 NM were found to be
+    incorrectly labeled.
+
+  max_distance_start: >
+    No additional filter based on the distance from the beginning of the
+    trajectory was required for this airport and season.
+
+  min_duration: >
+    No additional minimum-duration filter was required for this airport and season.
+
+  max_duration: >
+    No additional maximum-duration filter was required for this airport and season.
+
+  min_average_speed: >
+    Pushback segments with an average speed below 0.00026 were mostly found
+    to be incorrectly labeled.
+
+  pushbacks_remove: >
+    Additional incorrectly labeled pushback segments identified during
+    manual inspection.
+
+  pushbacks_keep: >
+    Automatically filtered pushback segments that were manually confirmed
+    to be correctly labeled.
+
+  no_pushbacks_remove: >
+    Flights without an automatically detected pushback that were identified
+    as false negatives during manual inspection and therefore excluded.
+
+manual_review:
+  pushbacks_remove:
+    - SAS64U_2599
+
+  pushbacks_keep: []
+
+  no_pushbacks_remove:
+    - AFR17NT_066
+    - DLH4MA_213
+    - FIN2N_457
+    - FIN2N_460
+    - FIN4XD_474
+    - FIN826_473
+    - FIN4XD_490
+    - FIN4XD_517
+    - FIN8LF_467
+    - FIN826_488
+    - FIN826_492
+    - LOT458_768
+    - NSZ3211_1805
+    - NSZ1KM_1655
+    - SAS024_2125
+    - SAS1014_1179
+    - SAS1481_2712
+    - SAS1819_2199
+    - SAS493_395
+    - SAS54C_1427
+    - SAS72U_2467

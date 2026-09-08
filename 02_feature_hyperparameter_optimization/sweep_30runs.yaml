@@ -1,0 +1,43 @@
+program: sweep.py
+method: bayes
+
+metric:
+  name: oof/objective
+  goal: maximize
+
+parameters:
+  feature_variant:
+    values:
+      - gs_trackdiff
+      - gs_gsdiff_trackdiff
+      - gs_circular
+      - gs_gsdiff_circular
+      - gs_trackdiff_circular
+      - gs_gsdiff_trackdiff_circular
+
+  # This parameter is sampled independently. It is intentionally ignored by
+  # the code when feature_variant is gs_trackdiff or gs_gsdiff_trackdiff.
+  track_window_preset:
+    values:
+      - single_5
+      - single_15
+      - single_30
+      - dual_5_15
+      - baseline_10_30
+      - triple_5_15_30
+      - triple_10_30_60
+
+  learning_rate:
+    distribution: log_uniform_values
+    min: 0.0003
+    max: 0.003
+
+  dropout:
+    distribution: uniform
+    min: 0.10
+    max: 0.30
+
+  positive_weight_scale:
+    distribution: uniform
+    min: 0.50
+    max: 1.00

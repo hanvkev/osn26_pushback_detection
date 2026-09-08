@@ -1,0 +1,65 @@
+airport: ESSA
+season: Spring
+
+filters:
+  min_distance: null
+  max_distance: 0.2
+  max_distance_start: null
+  min_duration: null
+  min_average_speed: 0.00015
+
+reasons:
+  min_distance: >
+    No additional minimum-distance filter was required for this airport and season.
+
+  max_distance: >
+    Pushback segments with a distance greater than 0.2 NM were found to be
+    incorrectly labeled.
+
+  max_distance_start: >
+    No additional filter based on the distance from the beginning of the
+    trajectory was required for this airport and season.
+
+  min_duration: >
+    No additional minimum-duration filter was required for this airport and season.
+
+  min_average_speed: >
+    Pushback segments with an average speed below 0.00015 were mostly found
+    to be incorrectly labeled.
+
+  pushbacks_remove: >
+    Additional incorrectly labeled pushback segments identified during
+    manual inspection.
+
+  pushbacks_keep: >
+    Automatically filtered pushback segments that were manually confirmed
+    to be correctly labeled.
+
+  no_pushbacks_remove: >
+    Flights without an automatically detected pushback that were identified
+    as false negatives during manual inspection and therefore excluded.
+
+manual_review:
+  pushbacks_remove: []
+
+  pushbacks_keep: []
+
+  no_pushbacks_remove:
+    - BEL3KH_378
+    - ENT56CZ_891
+    - DLH6JT_217
+    - DLH811_150
+    - EZS58FG_2461
+    - FIN826_502
+    - NSZ2046_1970
+    - NOZ817_628
+    - NSZ39C_2320
+    - RYR53SH_962
+    - RYR77VC_2728
+    - RYR77VC_2689
+    - RYR820V_3663
+    - SAS1042_1763
+    - SAS411_1716
+    - SAS69N_1664
+    - SAS87J_3561
+    - SAS95T_3284

@@ -1,0 +1,38 @@
+# Data
+data/
+
+# Generated outputs
+outputs/
+wandb/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SLURM
+*.slurm
+
+# Generated evaluation data
+results/evaluation/cache/
+results/evaluation/units/
+results/evaluation/combined/
+
+# Detailed generated paper evaluation data
+results/evaluation/paper_results/**/flight_evaluation_used.parquet
+results/evaluation/paper_results/**/segment_evaluation_used.parquet

@@ -1,0 +1,23 @@
+airport,season,label_status,n_flights
+EBBR,Autumn,labelled,195
+EBBR,Autumn,no pushback,28
+EBBR,Spring,labelled,213
+EBBR,Spring,no pushback,20
+EBBR,Summer,labelled,253
+EBBR,Summer,no pushback,22
+EBBR,Winter,labelled,195
+EBBR,Winter,no pushback,40
+KBOS,Autumn,labelled,186
+KBOS,Autumn,no pushback,81
+KBOS,Spring,labelled,459
+KBOS,Spring,no pushback,160
+KBOS,Winter,labelled,203
+KBOS,Winter,no pushback,29
+SABE,Autumn,labelled,136
+SABE,Autumn,no pushback,142
+SABE,Spring,labelled,111
+SABE,Spring,no pushback,144
+SABE,Summer,labelled,163
+SABE,Summer,no pushback,107
+SABE,Winter,labelled,113
+SABE,Winter,no pushback,144

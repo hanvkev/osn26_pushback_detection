@@ -1,0 +1,52 @@
+{
+  "columns": {
+    "flight_id": "flight_id",
+    "timestamp": "timestamp",
+    "latitude": "latitude",
+    "longitude": "longitude",
+    "groundspeed": "compute_gs",
+    "track": "compute_track",
+    "airport": "airport",
+    "season": "season"
+  },
+  "dataset": {
+    "airport": "",
+    "date": "",
+    "season": ""
+  },
+  "display": {
+    "focus_points": 180,
+    "plot_focus_points": 180,
+    "initial_zoom": 16.0,
+    "context_before_seconds": 30,
+    "context_after_seconds": 60,
+    "map_height": 520,
+    "plot_height": 320,
+    "map_style": "open-street-map",
+    "map_point_size": 7,
+    "active_point_size": 16,
+    "max_groundspeed": 20.0,
+    "groundspeed_unit": "kt",
+    "jump_points": 10,
+    "show_track": false
+  },
+  "colors": {
+    "trajectory": "#8b95a5",
+    "pushback": "#ff9f1c",
+    "push": "#1677ff",
+    "pull": "#9c36b5",
+    "active": "#e31a1c"
+  },
+  "tags": [
+    "noisy",
+    "resampled",
+    "missing_data",
+    "late_transponder_activation",
+    "inaccurate_position",
+    "multiple_stops",
+    "unusual_pushback",
+    "push_pull_manoeuvre",
+    "segment_boundary_uncertain",
+    "partially_observed"
+  ]
+}

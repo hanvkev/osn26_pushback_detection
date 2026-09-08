@@ -1,0 +1,60 @@
+airport: ESSA
+season: Autumn
+
+filters:
+  min_distance: 0.01
+  max_distance: 0.2
+  max_distance_start: null
+  min_duration: null
+  min_average_speed: null
+
+reasons:
+  min_distance: >
+    Pushback segments with a distance below 0.01 NM were considered most likely
+    to be noise.
+
+  max_distance: >
+    Pushback segments with a distance greater than 0.2 NM were found to be
+    incorrectly labeled.
+
+  max_distance_start: >
+    No additional filter based on the distance from the beginning of the
+    trajectory was required for this airport and season.
+
+  min_duration: >
+    No additional minimum-duration filter was required for this airport and season.
+
+  min_average_speed: >
+    No additional minimum-average-speed filter was required for this airport
+    and season.
+
+  pushbacks_remove: >
+    Additional incorrectly labeled pushback segments identified during
+    manual inspection.
+
+  pushbacks_keep: >
+    Automatically filtered pushback segments that were manually confirmed
+    to be correctly labeled.
+
+  no_pushbacks_remove: >
+    Flights without an automatically detected pushback that were identified
+    as false negatives during manual inspection and therefore excluded.
+
+manual_review:
+  pushbacks_remove: []
+
+  pushbacks_keep: []
+
+  no_pushbacks_remove:
+    - AUA312_328
+    - EWG8ER_3616
+    - EWG84K_3589
+    - FIN826_532
+    - FIN826_529
+    - NSZ5B_2145
+    - RYR1T_3726
+    - SAS417_1699
+    - SAS491_1780
+    - SAS63Z_2753
+    - SAS50P_1041
+    - SAS85P_1494

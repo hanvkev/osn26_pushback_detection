@@ -1,0 +1,155 @@
+airport: RJTT
+season: Winter
+
+filters:
+  min_distance: null
+  max_distance: 0.23
+  max_distance_start: 0.02
+  min_duration: 11
+  max_duration: null
+  min_average_speed: 0.0002
+  max_average_speed: 0.0011
+
+reasons:
+  min_distance: >
+    No additional minimum-distance filter was required for this airport and season.
+
+  max_distance: >
+    Pushback segments with a distance greater than 0.23 NM were found to be
+    incorrectly labeled.
+
+  max_distance_start: >
+    Pushback segments starting more than 0.02 NM from the beginning of the
+    trajectory were found to be incorrectly labeled, affected by noise, or incomplete.
+
+  min_duration: >
+    Pushback segments shorter than 11 seconds were found to be incorrectly
+    labeled or to have an incorrectly detected start or end.
+
+  max_duration: >
+    No additional maximum-duration filter was required for this airport and season.
+
+  min_average_speed: >
+    Pushback segments with an average speed below 0.0002 were mostly found
+    to be incorrectly labeled.
+
+  max_average_speed: >
+    Pushback segments with an average speed above 0.0011 were mostly found
+    to be incorrectly labeled.
+
+  pushbacks_remove: >
+    Additional incorrectly labeled pushback segments identified during
+    manual inspection.
+
+  pushbacks_keep: >
+    Automatically filtered pushback segments that were manually confirmed
+    to be correctly labeled.
+
+  no_pushbacks_remove: >
+    Flights without an automatically detected pushback that were identified
+    as false negatives during manual inspection and therefore excluded.
+
+manual_review:
+  pushbacks_remove:
+    - JAL233_2896
+    - SFJ41_2625
+    - SFJ45_2863
+    - JAL569_5419
+    - JAL651_5381
+    - JAL569_5107
+    - JAL659_3631
+    - VJT755_150
+    - KAL2102_262
+    - ANA211_7083
+    - AAR1035_230
+
+  pushbacks_keep:
+    - ANA1083_1803
+    - ANA987_1590
+    - JAL611_4179
+    - CSH816_527
+    - UAL876_9478
+    - UAL882_9433
+    - ANA531_2342
+    - QFA26_659
+    - JAL987_4806
+    - JAL323_4563
+    - JAL59_8388
+    - PAL421_312
+    - ANA589_1524
+    - ANA65_7951
+    - JAL599_4141
+    - ANA457_1287
+    - DAL120_9603
+    - EVA191_9354
+    - JAL145_4189
+    - SNJ79_7150
+    - JAL465_4058
+    - CES538_392
+    - ANA87_7386
+    - ANA13_1509
+    - UAL130_9636
+    - SNJ21_7271
+    - JAL79_7971
+    - HKE625_630
+    - ANA871_8579
+
+  no_pushbacks_remove:
+    - ADO15_4584
+    - ADO29_4599
+    - ANA1095_9096
+    - ANA1095_9098
+    - ANA14_6833
+    - ANA1891_4438
+    - ANA247_7669
+    - ANA241_9065
+    - ANA255_6876
+    - ANA253_7680
+    - ANA269_9234
+    - ANA265_9075
+    - ANA27_8965
+    - ANA283_4376
+    - ANA285_4308
+    - ANA295_2242
+    - ANA299_2509
+    - ANA453_1486
+    - ANA473_9203
+    - ANA473_9044
+    - ANA473_9245
+    - ANA531_2371
+    - ANA555_1584
+    - ANA661K_7827
+    - ANA71_6892
+    - ANA73_9060
+    - ANA73_9223
+    - ANA759_5949
+    - ANA89_8941
+    - ANA89_9010
+    - ANA91_7453
+    - ANA985_7580
+    - ANA99_2546
+    - BAW8_083
+    - DAL120_9570
+    - JAL267_4474
+    - JAL283_4477
+    - JAL453_5579
+    - JAL459_3699
+    - JAL463_4791
+    - JAL487_4131
+    - JAL647_3075
+    - JAL669_3634
+    - KAL2102_258
+    - KAL752_250
+    - PAL423_327
+    - SFJ23_2804
+    - SFJ53_2824
+    - SFJ53_2820
+    - SFJ53_2821
+    - SFJ55_3373
+    - SFJ73_2833
+    - SFJ83_3157
+    - SFJ91_3393
+    - SFJ91_2843
+    - SKY723_6158
+    - TTW217_9346
+    - VJC821_9311
