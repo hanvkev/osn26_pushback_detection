@@ -1,0 +1,39 @@
+[project]
+name = "osn26-pushback-detection"
+version = "0.1.0"
+description = "Pushback detection from ADS-B trajectories using a Temporal Convolutional Network for the 14th OpenSky Symposium 2026."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+
+dependencies = [
+    "cartes",
+    "cartopy",
+    "fastapi>=0.115",
+    "ipykernel<7",
+    "ipython",
+    "ipywidgets>=8.1.8",
+    "joblib",
+    "matplotlib",
+    "nbformat>=5.10.4",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "plotly>=6.6.0",
+    "pyarrow>=14.0",
+    "pydantic",
+    "pyopensky",
+    "pyyaml",
+    "scikit-learn>=1.8.0",
+    "starlette",
+    "torch ; platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "traffic>=2.13",
+    "uvicorn>=0.34",
+    "wandb>=0.28.1",
+]
+
+# Keep dependency resolution and uv.lock local to this project.
+[tool.uv.workspace]
+members = []
+
+[tool.uv.sources]
+torch = { url = "https://download.pytorch.org/whl/cu126/torch-2.8.0%2Bcu126-cp311-cp311-manylinux_2_28_x86_64.whl" }
+traffic = { git = "https://github.com/xoolive/traffic.git", branch = "master" }
