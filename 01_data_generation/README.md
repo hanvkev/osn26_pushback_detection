@@ -27,3 +27,7 @@ Fetched and labelled test data are stored under:
 data/test/01_fetched/
 data/test/02_labeled/
 ```
+
+`02_test/03_zenodo_export/` builds the public release of the labelled test dataset on Zenodo
+(https://doi.org/10.5281/zenodo.23548217), which contains the labels and a script to rebuild the
+trajectories from the OpenSky historical database.

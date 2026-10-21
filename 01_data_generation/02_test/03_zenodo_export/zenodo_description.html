@@ -1,0 +1,14 @@
+<p>This dataset contains manually labelled aircraft pushback manoeuvres for 3,167 departures at three airports (Brussels Airport EBBR, Boston Logan International Airport KBOS and Aeroparque Jorge Newbery SABE), observed on 16 full days between January 2025 and June 2026 in different seasons (all four seasons at EBBR and SABE, three at KBOS). For every flight, a single annotator marked whether a pushback occurred and, if so, its start and end; within each pushback, the individual push and pull phases are annotated where identifiable. In total, 2,227 flights contain a labelled pushback (4,933 annotated segments), 917 flights have no pushback and 23 flights are marked as not clear.</p>
+<p>The dataset was created as the independent test set for the paper <em>Detection of Aircraft Pushback Segments Using Deep Learning</em>, submitted to the 14th OpenSky Symposium 2026 in Madrid (proceedings in the Journal of Open Aviation Science) and currently under review. When using this data in a scientific publication, please cite this dataset and, once published, the paper.</p>
+<p><strong>Trajectories.</strong> The ADS-B trajectories are not redistributed. They are fetched from the historical database of the OpenSky Network with the included script, which requires an OpenSky data access account. The script rebuilds every flight exactly as it was labelled and verifies it against fingerprints of the labelled positions, so the point indices of the labels refer to the same points.</p>
+<p>The archive contains:</p>
+<ul>
+<li><strong>labels/flights.csv</strong>: one row per flight with airport, date, season, transponder address, callsign, time window, number of points, fingerprints, label status and annotator tags.</li>
+<li><strong>labels/segments.csv</strong>: one row per annotated segment (pushback, push or pull) with start and end timestamps and point indices.</li>
+<li><strong>labels/query_bounds.csv</strong>: bounding box per airport-day for the OpenSky query.</li>
+<li><strong>fetch_trajectories.py</strong>: fetches the trajectories and writes one file per airport-day with point-wise labels.</li>
+<li><strong>README.md</strong>: data collection, labelling, file formats and column definitions.</li>
+</ul>
+<p>To obtain the trajectories, run <strong>fetch_trajectories.py</strong> after configuring your OpenSky credentials; the required library versions are listed in <strong>README.md</strong>.</p>
+<p>The code for labelling, model training and evaluation is available at <a href="https://github.com/hanvkev/osn26_pushback_detection">https://github.com/hanvkev/osn26_pushback_detection</a>.</p>
+<p>The trajectories are derived from data of the OpenSky Network (Schäfer et al., IPSN 2014) and processed with the traffic library (Olive, JOSS 2019).</p>

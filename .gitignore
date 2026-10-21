@@ -29,6 +29,7 @@ Thumbs.db
 *.slurm
 
 # Generated evaluation data
+results/evaluation_zenodo/
 results/evaluation/cache/
 results/evaluation/units/
 results/evaluation/combined/
